@@ -44,6 +44,10 @@ body {
   vertical-align: -.125em;
   fill: currentColor;
 }
+.bi2 {
+  vertical-align: -.125em;
+  fill: rgb(229, 9, 20);
+}
 
 .nav-scroller {
   position: relative;
