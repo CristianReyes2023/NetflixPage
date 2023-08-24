@@ -10,7 +10,13 @@ body {
   max-width: 700px;
 }
 
-
+.bg-red {
+  background: rgb(239, 107,114);
+}
+.bg-redPuro {
+  background: rgb(229, 9,20);
+  color: rgb(229, 9,20);
+}
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
