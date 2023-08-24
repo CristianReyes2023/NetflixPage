@@ -51,10 +51,17 @@ body {
 
 /* Clases Cristian */
 .bg-danger-subtle {
-  background: rgb(239, 107,114)!important;
+  background: rgb(239, 107,114) !important;
 }
 .bg-danger {
   background: rgb(229, 9,20)!important;
+}
+.bg-danger-subtle {
+  background-color: var(--bs-danger-bg-subtle) !important;
+}
+:root, [data-bs-theme="light"] {
+  --bs-danger: rgb(229,9,20);
+  --bs-danger-bg-subtle: rgb(239,107,114);
 }
 /* Fin clases cristian */
 .bd-placeholder-img {
@@ -150,3 +157,5 @@ body {
 .bd-mode-toggle {
   z-index: 1500;
 }
+
+
