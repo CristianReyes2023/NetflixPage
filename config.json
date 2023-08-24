@@ -1,4 +1,8 @@
 {
+    "navbar":{
+        "imagen":"assets/brand/Netflix_2015_logo.svg",
+        "parrafo":"Sign In"
+    },
     "section":{
         "step":"STEP 1 OF 3",
         "titulo":"Choose the plan that's right for you",

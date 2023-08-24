@@ -20,6 +20,20 @@
 
 const path = "config";
 
+let construirNavbar = async()=>{
+    let peticion= await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let selecion = document.querySelector("#navBar");
+        selecion.insertAdjacentHTML("beforeend",/*html*/ `
+        <img
+            class="netFliximg"
+            src="assets/brand/Netflix_2015_logo.svg">
+        <p class="signIn">${res.navbar.parrafo}</p>
+    `)
+}
+construirNavbar();
+
+
 let construirElEncabezado = async()=>{
     let peticion= await fetch(`${path}.json`);
     let res = await peticion.json();
