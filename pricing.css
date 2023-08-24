@@ -51,10 +51,10 @@ body {
 
 /* Clases Cristian */
 .bg-red {
-  background: rgb(239, 107,114);
+  background: rgb(239, 107,114)!important;
 }
 .bg-redPuro {
-  background: rgb(229, 9,20);
+  background: rgb(229, 9,20)!important;
 }
 /* Fin clases cristian */
 .bd-placeholder-img {
