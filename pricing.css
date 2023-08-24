@@ -63,6 +63,28 @@ body {
   --bs-danger: rgb(229,9,20);
   --bs-danger-bg-subtle: rgb(239,107,114);
 }
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(0 * var(--bs-gutter-x));
+    margin-left: calc(0 * var(--bs-gutter-x));
+}
+.table {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: var(--bs-table-border-color);
+}
+.w-95 {
+  width: 95%!important;
+  margin-left: 2.5% !important;
+  margin-right: 2.5% !important;
+}
 /* Fin clases cristian */
 .bd-placeholder-img {
   font-size: 1.125rem;
