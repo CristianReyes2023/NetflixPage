@@ -31,7 +31,13 @@ body {
   --bs-text-opacity: 2;
   color: rgba(115,115,115) !important;
 }
-
+.fs-6 {
+  font-size: 0.8rem !important;
+}
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgba(243,243,243) !important;
+}
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
