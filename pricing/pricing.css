@@ -15,7 +15,6 @@ body {
 }
 .bg-redPuro {
   background: rgb(229, 9,20);
-  color: rgb(229, 9,20);
 }
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -23,6 +22,14 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+}
+.text-danger {
+  --bs-text-opacity: 1;
+  color: rgb(229, 9,20) !important;
+}
+.text-secondary {
+  --bs-text-opacity: 2;
+  color: rgba(115,115,115) !important;
 }
 
 @media (min-width: 768px) {
