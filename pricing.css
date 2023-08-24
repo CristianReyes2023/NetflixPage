@@ -50,10 +50,10 @@ body {
 }
 
 /* Clases Cristian */
-.bg-red {
+.bg-danger-subtle {
   background: rgb(239, 107,114)!important;
 }
-.bg-redPuro {
+.bg-danger {
   background: rgb(229, 9,20)!important;
 }
 /* Fin clases cristian */
