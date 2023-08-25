@@ -59,7 +59,7 @@ let construirPlanes = async () => {
     ${res.bloques.map((value) =>/*html*/`
     <div class="col">  
         <div class="card mb-4 rounded-0 shadow-sm">
-            <div class="card-header rounded-0 py-3 bg-danger-subtle">
+            <div class="card-header rounded-0 py-3 ${value.background}">
                 <h4 class="my-0 fw-normal text-light">${value.plan}</h4>
             </div>
             <div class="card-body">
@@ -71,6 +71,39 @@ let construirPlanes = async () => {
     </div>`).join(" ")}`)
 }
 construirPlanes();
+
+let construirTables = async () => {
+    let peticion = await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let selecion = document.querySelector("#myTable");
+    selecion.insertAdjacentHTML("beforeend",/*html*/ `
+    <thead>
+        <tr>
+        ${res.table.thead.map((value) =>/*html*/`
+        <th style="${value.width}" class="${value.text}">${value.tr}`).join(" ")}</th> 
+        </tr>
+    </thead>
+    <tbody>
+        ${res.table.tbody.map((value) =>/*html*/`
+        <tr>
+        <th scope="row" class="text-start fw-medium">${value.th}</th>
+        <td>
+            <p class="fw-bolder text-secondary">${value.basic}</p>
+        </td>
+        <td>
+        <p class="fw-bolder text-secondary">${value.standard}</p>
+        </td>
+        <td>
+        <p class="text-danger fw-bolder">${value.premium}</p>
+        </td>
+        </tr>`).join(" ")}
+    </tbody>`)
+}
+construirTables();
+
+
+
+
 
 
 

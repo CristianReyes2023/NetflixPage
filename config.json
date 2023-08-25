@@ -21,15 +21,61 @@
     "bloques":[
         {
             "plan":"Basic",
-            "precio":"6.99"
+            "precio":"6.99",
+            "background":"bg-danger-subtle"
         },
         {
             "plan":"Standard",
-            "precio":"15.49"
+            "precio":"15.49",
+            "background":"bg-danger-subtle"
         },
         {
             "plan":"Premium",
-            "precio":"19.99"
+            "precio":"19.99",
+            "background":"bg-danger"
         }
-    ]
+    ],
+    "table":{
+        "thead":[
+            {
+                "width":"width:34%",
+                "tr":""
+            },
+            {
+                "width":"width:22%",
+                "tr":"Basic"
+            },
+            {
+                "width":"width:22%",
+                "tr":"Standard"
+            },
+            {
+                "width":"width:22%",
+                "tr":"Premium",
+                "text":"text-danger"
+            }
+        ],
+        "tbody":[
+            {
+                "th":"Video quality",
+                "basic":"Good",
+                "standard":"Better",
+                "premium":"Best"
+            },
+            {
+                "th":"Resolution",
+                "basic":"720p",
+                "standard":"1080p",
+                "premium":"4k+HDR"
+            },
+            {
+                "th":"Watch on your TV,computer,mobile,phone and tablet",
+                "basic":"<svg class='bi' width='24' height='24'><use xlink:href='#check' /></svg>",
+                "standard":"<svg class='bi' width='24' height='24'><use xlink:href='#check' /></svg>",
+                "premium":"<svg class='bi' width='24' height='24'><use xlink:href='#check' /></svg>"
+            }
+        ]
+        
+    }
+
 }
