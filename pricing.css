@@ -85,6 +85,9 @@ body {
   margin-left: 2.5% !important;
   margin-right: 2.5% !important;
 }
+.ms-5 {
+  margin-left: 12.5% !important;
+}
 /* Fin clases cristian */
 .bd-placeholder-img {
   font-size: 1.125rem;

@@ -1,23 +1,4 @@
 
-// const path = "config";
-
-// let construirElEncabezado = async()=>{
-//     let peticion= await fetch(`${path}.json`);
-//     let res = await peticion.json();
-//     let selecion = document.querySelector("#myJsonSection");
-//         selecion.insertAdjacentHTML("beforeend",/*html*/ `
-//         <p class="fs-6">${res.section.step}</p>
-//         <h1 class="display-4 fw-normal text-body-emphasis fs-1 fw-semibold">${res.section.titulo}</h1>
-//         <p class="d-flex">
-//             ${res.section.parrafo.map((value)=>/*html*/`
-//                 <svg src="${value.imagen}"
-//                     class="bi2 me-2"
-//                     style=""></svg>${value.texto}<br>`).join(" ")}
-//         </p>
-//     `)
-// }
-// construirElEncabezado();
-
 const path = "config";
 
 let construirNavbar = async () => {
@@ -126,43 +107,6 @@ let construirFooter = async () => {
     </div>`)
 }
 construirFooter();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
