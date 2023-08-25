@@ -75,7 +75,27 @@
                 "premium":"<svg class='bi' width='24' height='24'><use xlink:href='#check' /></svg>"
             }
         ]
-        
+    },
+            
+    "footer":{
+        "contacto":"Questions? Call 01 800 917 1563",
+        "campus":"Campuslands 2023 Bucaramanga",
+        "info":[
+            {
+                "dato1":"FAQ",
+                "dato2":"Privacy",
+                "dato3":""
+            },
+            {
+                "dato1":"Help Center",
+                "dato2":"Cookie Preferences",               "dato3":""
+            },
+            {
+                "dato1":"Netflix Shop",
+                "dato2":"Corporate information",
+                "dato3":"Terms of Use"
+            }
+        ]
     }
 
 }

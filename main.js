@@ -102,37 +102,34 @@ let construirTables = async () => {
 construirTables();
 
 
+let construirFooter = async () => {
+    let peticion = await fetch(`${path}.json`);
+    let res = await peticion.json();
+    let selecion = document.querySelector("#myFooter");
+    selecion.insertAdjacentHTML("beforeend",/*html*/ `
+    <p class="link-secondary fs-6">${res.footer.contacto}</p>
+    <div class="row">
+        <div class="col-12 col-md">
+        <small class="d-block mb-3 text-body-secondary">&copy;${res.footer.campus}</small>
+        </div>
+        ${res.footer.info.map((value) =>/*html*/`
+        <div class="col-6 col-md">
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary fs-6 text-decoration-none" href="#">${value.dato1}</a></li>
+                <li class="mb-1"><a class="link-secondary fs-6 text-decoration-none" href="#">${value.dato2}</a>
+                </li>
+                <li class="mb-1"><a class="link-secondary fs-6 text-decoration-none" href="#">${value.dato3}</a>
+                </li>
+            </ul>
+        </div>`).join(" ")}
+    </div>
+    </div>`)
+}
+construirFooter();
 
 
 
 
-
-
-
-
-
-
-
-
-
-// let proceso = new Promise((resolve,reject) => {
-//     resolve("Todo ok continue")
-// });
-
-// let obtener = async(p1)=>{
-//     let peticion= await fetch(`${p1}.json`);
-//     let res = await peticion.json();
-//     console.log(res);
-// }
-// obtener("config");
-
-//Modo pro
-
-// (async(p1)=>{
-//     let peticion = await fetch(`${p1}.json`);
-//     let res = await peticion.json();
-//     console.log(res);
-// })("config")
 
 
 
