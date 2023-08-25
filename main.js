@@ -37,10 +37,15 @@ let construirPlanes = async () => {
     let res = await peticion.json();
     let selecion = document.querySelector("#myPlans");
     selecion.insertAdjacentHTML("beforeend",/*html*/ `
-    ${res.bloques.map((value) =>/*html*/`
+    ${res.bloques.map((value, index) => {
+        let bgClass = "card-header rounded-0 py-3 bg-danger-subtle";
+        if (index === res.bloques.length - 1) {
+            bgClass = "card-header rounded-0 py-3 bg-danger";
+        }
+        return /*html*/`
     <div class="col">  
         <div class="card mb-4 rounded-0 shadow-sm">
-            <div class="card-header rounded-0 py-3 ${value.background}">
+            <div class="${bgClass}">
                 <h4 class="my-0 fw-normal text-light">${value.plan}</h4>
             </div>
             <div class="card-body">
@@ -49,7 +54,7 @@ let construirPlanes = async () => {
                 </h1>
             </div>
         </div>
-    </div>`).join(" ")}`)
+    </div>`}).join(" ")}`)
 }
 construirPlanes();
 
@@ -60,8 +65,18 @@ let construirTables = async () => {
     selecion.insertAdjacentHTML("beforeend",/*html*/ `
     <thead>
         <tr>
-        ${res.table.thead.map((value) =>/*html*/`
-        <th style="${value.width}" class="${value.text}">${value.tr}`).join(" ")}</th> 
+        ${res.table.thead.map((value, index) => {
+        let widthColumn = "width:30%";
+        let textColor = "";
+        if (index != 0) {
+            widthColumn = `width:${(70) / (res.table.thead.length)}%`;
+        }
+        if (index === res.table.thead.length - 1) {
+            textColor = "text-danger"
+        }
+        return/*html*/`
+        <th style="${widthColumn}" class="${textColor}">${value.tr}`
+    }).join(" ")}</th> 
         </tr>
     </thead>
     <tbody>
@@ -79,6 +94,10 @@ let construirTables = async () => {
         </td>
         </tr>`).join(" ")}
     </tbody>`)
+    let termUs = document.querySelector("#myTermUs");
+    termUs.insertAdjacentHTML("beforeend",/*html*/ `
+    <p id="myTermUs" class="text-secondary fs-6 w-95">${res.table.conditions}</p>
+    `)
 }
 construirTables();
 
@@ -107,12 +126,3 @@ let construirFooter = async () => {
     </div>`)
 }
 construirFooter();
-
-
-
-//Tenemos temporizadores
-//setTimeour()
-//setInterval()
-
-//https://jsonformatter.curiousconcept.com/
-//Para valiar la estructura del json

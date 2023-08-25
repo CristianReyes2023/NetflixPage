@@ -21,38 +21,31 @@
     "bloques":[
         {
             "plan":"Basic",
-            "precio":"6.99",
-            "background":"bg-danger-subtle"
+            "precio":"6.99"
         },
         {
             "plan":"Standard",
-            "precio":"15.49",
-            "background":"bg-danger-subtle"
+            "precio":"15.49"
         },
         {
             "plan":"Premium",
-            "precio":"19.99",
-            "background":"bg-danger"
+            "precio":"19.99"
         }
     ],
     "table":{
+        "conditions":"HD (720p), Full HD    (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our <a href='' class='text-decoration-none'>Terms of Use</a> for more details. Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic.",
         "thead":[
             {
-                "width":"width:34%",
                 "tr":""
             },
             {
-                "width":"width:22%",
                 "tr":"Basic"
             },
             {
-                "width":"width:22%",
                 "tr":"Standard"
             },
             {
-                "width":"width:22%",
-                "tr":"Premium",
-                "text":"text-danger"
+                "tr":"Premium"
             }
         ],
         "tbody":[
@@ -88,7 +81,8 @@
             },
             {
                 "dato1":"Help Center",
-                "dato2":"Cookie Preferences",               "dato3":""
+                "dato2":"Cookie Preferences",               
+                "dato3":""
             },
             {
                 "dato1":"Netflix Shop",
